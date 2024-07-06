@@ -1,4 +1,5 @@
-body{
+/* Basic reset */
+body {
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';
@@ -6,16 +7,17 @@ body{
     height: 100%;
 }
 
-*{
+* {
     /* margin: 0%; */
     box-sizing: border-box;
 }
 
-h1,h3{
+h1, h3 {
     font-weight: 400;
-    margin-top: 0%;
+    margin-top: 0;
 }
-.weather-app{
+
+.weather-app {
     min-height: 100vh;
     background-image: url(images/day/day-cloudy.jpeg);
     background-position: center;
@@ -27,7 +29,7 @@ h1,h3{
     opacity: 1;
 }
 
-.weather-app::before{
+.weather-app::before {
     content: "";
     position: absolute;
     top: 0;
@@ -38,10 +40,10 @@ h1,h3{
     z-index: 0;
 }
 
-.container{
+.container {
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -50,59 +52,54 @@ h1,h3{
     flex-direction: column;
     padding: 2em 3em 4em 3em;
 }
-.container>div{
+
+.container > div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.city-time,
-.temp,
-.weather{
+.city-time, .temp, .weather {
     margin: 0 1em;
 }
 
-.city-time h1{
+.city-time h1 {
     margin: 0;
     margin-bottom: 0.2em;
     font-size: 3em;
 }
 
-.temp{
+.temp {
     font-size: 7em;
     margin: 0;
 }
 
-.weather img{
+.weather img {
     display: block;
     margin: 0.5em 0;
 }
 
-.panel{
+.panel {
     position: absolute;
     width: 40%;
     height: 100%;
     top: 0;
-    right: 0%;
+    right: 0;
     background: rgba(110, 110, 110, 0.25);
-    box-shadow: 
-    0 8px 32px 0
-    rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: ipx solid
-    rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 1;
     padding: 3em 2em;
     overflow-y: scroll;
-
 }
 
-.panel form{
+.panel form {
     margin-bottom: 3em;
 }
 
-.submit{
+.submit {
     position: absolute;
     top: 0;
     right: 0;
@@ -116,13 +113,13 @@ h1,h3{
     transition: 0.4s;
 }
 
-.submit hover{
+.submit:hover {
     background: #fff !important;
     color: #000;
 }
 
-.search{
-    top: 0%;
+.search {
+    top: 0;
     background: none;
     border: none;
     border-bottom: 1px #ccc solid;
@@ -132,54 +129,54 @@ h1,h3{
     font-size: 1.1em;
 }
 
-.search focus{
+.search:focus {
     outline: none;
 }
 
-.search :placeholder{
+.search::placeholder {
     color: #ccc;
 }
 
-.panel ul{
+.panel ul {
     padding: 0 0 1em 0;
     margin: 2em 0;
     border-bottom: 1px #ccc solid;
 }
 
-.panel ul li{
+.panel ul li {
     color: #ccc;
     margin: 2.5em 0;
 }
 
-.panel uul h4{
+.panel ul h4 {
     margin: 3em 0;
 }
 
-.city{
+.city {
     display: block;
     cursor: pointer;
 }
 
-.city hover{
+.city:hover {
     color: #fff;
 }
 
-.details li{
+.details li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (max-width:800px){
-    .panel, .container{
+@media screen and (max-width: 800px) {
+    .panel, .container {
         position: relative;
         width: 100%;
         top: initial;
     }
 }
 
-@media screen and (max-width: 500px){
-    .weather-app{
+@media screen and (max-width: 500px) {
+    .weather-app {
         min-height: 40em;
     }
 }
